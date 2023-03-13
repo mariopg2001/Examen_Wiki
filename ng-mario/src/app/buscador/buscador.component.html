@@ -1,0 +1,44 @@
+<h1>buscador</h1>
+
+<div>
+    <input type="text" id="buscador"/>
+    <button (click)="buscar()">Buscar</button>
+</div>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>colum1</td>
+                <td>colum2</td>
+                <td>colum3</td>
+            </tr>
+        </thead>
+        <tbody *ngIf="observable">
+            <tr *ngFor="let pagina of observable[1]">
+              <td>{{pagina}}</td>
+              
+              <td>
+                <button (click)="verContribuidores(pagina)">Contributors</button>
+              </td>
+            </tr>
+      
+          </tbody>
+    </table>
+</div>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>colum1</td>
+                <td>colum2</td>
+                <td>colum3</td>
+            </tr>
+        </thead>
+        <tbody *ngIf="observable">
+            <tr *ngFor="let pagina2 of observable2">
+              <td>{{pagina2.name}}</td>
+            </tr>
+      
+          </tbody>
+    </table>
+</div>
